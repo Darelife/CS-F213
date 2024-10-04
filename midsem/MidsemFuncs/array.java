@@ -1,9 +1,9 @@
 package MidsemFuncs;
 
-public class reversingArray {
+public class array {
   private int[] arr;
 
-  public reversingArray(int arr[]) {
+  public array(int arr[]) {
     this.arr = arr;
   }
 
@@ -19,5 +19,11 @@ public class reversingArray {
     this.arr[posA] = this.arr[posB];
     this.arr[posB] = temp;
     return this.arr;
+  }
+
+  public void cloneTest() {
+    int[] brr = arr.clone();
+    System.out.println(arr.hashCode());
+    System.out.println(brr.hashCode());
   }
 }
