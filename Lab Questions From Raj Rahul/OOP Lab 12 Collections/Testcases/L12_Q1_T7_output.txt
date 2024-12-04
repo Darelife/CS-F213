@@ -1,0 +1,18 @@
+John started charging at port 0
+John finished charging and left.
+Sarah started charging at port 0
+Sarah finished charging and left.
+John started charging at port 0
+Mike started charging at port 1
+John finished charging and left.
+Sarah started charging at port 0
+Mike finished charging and left.
+Sarah finished charging and left.
+Mike's charging history:
+Charging session: Energy charged: 49.60 kWh
+Sarah's charging history:
+Charging session: Energy charged: 64.40 kWh
+Charging session: Energy charged: 64.40 kWh
+John's charging history:
+Charging session: Energy charged: 60.00 kWh
+Charging session: Energy charged: 60.00 kWh

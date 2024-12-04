@@ -1,0 +1,12 @@
+2
+9
+ARRIVE John Tesla Model3 75.0
+ARRIVE Sarah BMW i4 80.5
+DEPART John
+ARRIVE John
+DEPART Sarah
+ARRIVE Sarah
+DEPART John
+ARRIVE John
+DEPART Sarah
+DEPART John

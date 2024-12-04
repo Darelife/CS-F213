@@ -2,16 +2,18 @@ import java.util.*;
 
 // ChargingStation.java
 public class ChargingStation {
-    // TODO: Students need to implement collections for charging ports and waiting queue (use variable names chargingPorts and waitingQueue)
+    // TODO: Students need to implement collections for charging ports and waiting
+    // queue (use variable names chargingPorts and waitingQueue)
     private LinkedList<ChargingPort> chargingPorts = new LinkedList<ChargingPort>();
     public Queue<CarOwner> waitingQueue;
     private int portCount;
-    
+
     public ChargingStation(int numberOfPorts) {
-        // TODO: Initialize the charging ports and waiting queue collections . (HINT : You might need to use a loop to initialise the charging ports)
+        // TODO: Initialize the charging ports and waiting queue collections . (HINT :
+        // You might need to use a loop to initialise the charging ports)
         this.portCount = numberOfPorts;
         chargingPorts = new LinkedList<ChargingPort>();
-        for (int i = 0; i<numberOfPorts; i++) {
+        for (int i = 0; i < numberOfPorts; i++) {
             ChargingPort cp = new ChargingPort(i);
             chargingPorts.addLast(cp);
         }
@@ -38,7 +40,7 @@ public class ChargingStation {
         }
         if (!found) {
             waitingQueue.add(carOwner);
-            System.out.println("All ports are occupied. Adding "+carOwner.getName()+ " to the waiting queue.");
+            System.out.println("All ports are occupied. Adding " + carOwner.getName() + " to the waiting queue.");
         }
     }
 
@@ -76,4 +78,3 @@ public class ChargingStation {
         }
     }
 }
-

@@ -1,0 +1,12 @@
+John started charging at port 0
+All ports are occupied. Adding Sarah to the waiting queue.
+All ports are occupied. Adding Mike to the waiting queue.
+John finished charging and left.
+Sarah started charging at port 0
+Sarah finished charging and left.
+Mike started charging at port 0
+Mike's charging history:
+Sarah's charging history:
+Charging session: Energy charged: 64.40 kWh
+John's charging history:
+Charging session: Energy charged: 60.00 kWh

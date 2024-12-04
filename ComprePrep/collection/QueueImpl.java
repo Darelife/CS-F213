@@ -2,58 +2,70 @@ import java.util.*;
 
 public class QueueImpl {
   // public LinkedList<Integer> lltest = new LinkedList<Integer>();
-  public static Queue<Integer> qt = new LinkedList<Integer>();
+  public static Queue<Integer> qt = new LinkedList<Integer>(Arrays.asList(1, 2, 3));
   public static Stack<Integer> st = new Stack<Integer>();
-  // priority queue
+  public static LinkedList<Integer> ll = new LinkedList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6));
   public static PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
-  public static List<Integer> li = new ArrayList<Integer>();
+  public static List<Integer> li = new ArrayList<Integer>(Arrays.asList(1, 2, 3));
+  public static Map<Integer, Integer> mp = new HashMap<>();
 
   public static void main(String[] args) {
-    qt.add(1);
-    qt.add(2);
-    qt.add(3);
 
-    System.out.println(qt);
     qt.poll();
-    System.out.println(qt);
-
     qt.add(4);
-    System.out.println(qt);
+    // System.out.println(qt.peek());
 
-    System.out.println(qt.peek());
-
-    st.push(1);
-    st.push(2);
-    st.push(3);
-
-    System.out.println(st);
+    st.addAll(Arrays.asList(1, 2, 3));
     st.pop();
-    System.out.println(st);
-
     st.push(4);
-    System.out.println(st);
+    // System.out.println(st.peek());
 
-    System.out.println(st.peek());
-
+    pq.addAll(Arrays.asList(4, 3, 2, 19, 28, 4, 3, 2, 19));
+    // pq doesn't sort the array, but it keeps the smallest element in the front
+    pq.poll();
+    pq.poll();
+    // System.out.println(pq.peek());
     pq.add(4);
-    pq.add(3);
-    pq.add(2);
 
-    System.out.println(pq);
+    // System.out.println(li);
+    li.add(4);
 
-    System.out.println(pq.poll());
-    System.out.println(pq);
+    // ll.add(4);
+    ListIterator<Integer> i = ll.listIterator();
+    int index = 0;
+    for (; i.hasNext(); index++) {
+      int a = i.next();
+      if (a == 4) {
+        i.previous();
+        break;
+      }
+      System.out.println(a + " " + (index));
+    }
+    index--;
+    // now basically 'i' is at the end of the list, last element..
+    // 1 2 3 4 5 6(i points to 6)
+    // i.hasPrevious() is true
+    // i.previous() will give 6..Why? Why not 5?
+    while (i.hasPrevious()) {
+      System.out.println(i.previous() + " " + (index--));
+    }
 
-    System.out.println(pq.peek());
+    mp.put(2, 2);
+    mp.put(1, 1);
 
-    pq.add(4);
-    System.out.println(pq);
+    // iterate through the map
+    for (Map.Entry<Integer, Integer> entry : mp.entrySet()) {
+      System.out.println(entry.getKey() + " " + entry.getValue());
+    }
+  }
+}
 
-    System.out.println(pq.poll());
-
-    li.add(1);
-    li.add(2);
-    li.add(3);
-    System.out.println(li);
+class Abc {
+  public <E extends Comparable<E>> E min(E o1, E o2) {
+    if (o1.compareTo(o2) < 0) {
+      return o1;
+    } else {
+      return o2;
+    }
   }
 }

@@ -1,0 +1,12 @@
+1
+10
+ARRIVE John Tesla Model3 75.0
+ARRIVE Sarah BMW i4 80.5
+DEPART John
+ARRIVE Mike Nissan Leaf 62.0
+ARRIVE John
+DEPART Sarah
+ARRIVE Tom Ford Mach-E 88.0
+DEPART Mike
+DEPART John
+DEPART Tom
